@@ -1,0 +1,129 @@
+Sure, I can help you with that. Here is a sample code for adding Order, User, and Cart APIs using Spring Boot:
+
+        1. Order API:
+
+
+@RestController
+@RequestMapping("/api/orders")
+public class OrderController {
+
+    @Autowired
+    private OrderService orderService;
+
+    @PostMapping
+    public ResponseEntity<Order> createOrder(@RequestBody Order order) {
+        Order createdOrder = orderService.createOrder(order);
+        return ResponseEntity.ok(createdOrder);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Order> getOrderById(@PathVariable Long id) {
+        Order order = orderService.getOrderById(id);
+        return ResponseEntity.ok(order);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Order>> getAllOrders() {
+        List<Order> orders = orderService.getAllOrders();
+        return ResponseEntity.ok(orders);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Order> updateOrder(@PathVariable Long id, @RequestBody Order order) {
+        Order updatedOrder = orderService.updateOrder(id, order);
+        return ResponseEntity.ok(updatedOrder);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
+        orderService.deleteOrder(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+
+
+2. User API:
+
+
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @PostMapping
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User createdUser = userService.createUser(user);
+        return ResponseEntity.ok(createdUser);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        User user = userService.getUserById(id);
+        return ResponseEntity.ok(user);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userService.getAllUsers();
+        return ResponseEntity.ok(users);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
+        User updatedUser = userService.updateUser(id, user);
+        return ResponseEntity.ok(updatedUser);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+
+
+3. Cart API:
+
+
+@RestController
+@RequestMapping("/api/carts")
+public class CartController {
+
+    @Autowired
+    private CartService cartService;
+
+    @PostMapping
+    public ResponseEntity<Cart> createCart(@RequestBody Cart cart) {
+        Cart createdCart = cartService.createCart(cart);
+        return ResponseEntity.ok(createdCart);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Cart> getCartById(@PathVariable Long id) {
+        Cart cart = cartService.getCartById(id);
+        return ResponseEntity.ok(cart);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Cart>> getAllCarts() {
+        List<Cart> carts = cartService.getAllCarts();
+        return ResponseEntity.ok(carts);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Cart> updateCart(@PathVariable Long id, @RequestBody Cart cart) {
+        Cart updatedCart = cartService.updateCart(id, cart);
+        return ResponseEntity.ok(updatedCart);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCart(@PathVariable Long id) {
+        cartService.deleteCart(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+
+
+Note: You need to create the corresponding services and repositories for each API. Also, make sure to configure the database connection and other necessary dependencies in the Spring Boot application.
