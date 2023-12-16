@@ -1,0 +1,111 @@
+{
+    "categories": [{
+                "id": 1,
+                "name": "Electronics",
+                "available": true,
+                "products": [{
+                        "id": 1,
+                        "name": "Laptop",
+                        "price": 1000.00,
+                        "description": "A high-performance laptop",
+                        "discount": 0.00,
+                        "mrp": 1000.00,
+                        "unit": "piece",
+                        "out_of_stock": false
+                    },
+                    {
+                        "id": 2,
+                        "name": "Smartphone",
+                        "price": 500.00,
+                        "description": "A top-notch smartphone",
+                        "discount": 0.00,
+                        "mrp": 500.00,
+                        "unit": "piece",
+                        "out_of_stock": false
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Clothing",
+                "available": true,
+                "products": [{
+                        "id": 3,
+                        "name": "T-Shirt",
+                        "price": 20.00,
+                        "description": "A comfortable cotton t-shirt",
+                        "discount": 0.00,
+                        "mrp": 20.00,
+                        "unit": "piece",
+                        "out_of_stock": false
+                    },
+                    {
+                        "id": 4,
+                        "name": "Jeans",
+                        "price": 50.00,
+                        "description": "A stylish pair of jeans",
+                        "discount": 0.00,
+                        "mrp": 50.00,
+                        "unit": "piece",
+                        "out_of_stock": false
+                    }
+                ],
+
+
+                "categories": [{
+                            "id": 1,
+                            "name": "Electronics",
+                            "available": true,
+                            "products": [{
+                                    "id": 1,
+                                    "name": "Laptop",
+                                    "price": 1000.00,
+                                    "description": "A high-performance laptop",
+                                    "discount": 0.00,
+                                    "mrp": 1000.00,
+                                    "unit": "piece",
+                                    "out_of_stock": false
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Smartphone",
+                                    "price": 500.00,
+                                    "description": "A top-notch smartphone",
+                                    "discount": 0.00,
+                                    "mrp": 500.00,
+                                    "unit": "piece",
+                                    "out_of_stock": false
+                                },
+
+                                {
+                                    "id": 2,
+                                    "name": "Clothing",
+                                    "available": true,
+                                    "products": [{
+                                            "id": 3,
+                                            "name": "T-Shirt",
+                                            "price": 20.00,
+                                            "description": "A comfortable cotton t-shirt",
+                                            "discount": 0.00,
+                                            "mrp": 20.00,
+                                            "unit": "piece",
+                                            "out_of_stock": false
+                                        },
+                                        {
+                                            "id": 4,
+                                            "name": "Jeans",
+                                            "price": 50.00,
+                                            "description": "A stylish pair of jeans",
+                                            "discount": 0.00,
+                                            "mrp": 50.00,
+                                            "unit": "piece",
+                                            "out_of_stock": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                        ]
+                    }
+    ]
+}
